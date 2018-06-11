@@ -7,4 +7,10 @@
     <color name="fbcolor">#3b5998</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorTextHint">#51d8c7</color>
+    <color name="bg_colors">#e8eeff</color>
+    <color name="colorAccent1">#FF4081</color>
+    <color name="yellow">#ffcc40</color>
+    <color name="back2">#075056</color>
+    <color name="grey">#72dac9</color>
+    <color name="white">#FFFFFF</color>
 </resources>

@@ -4,11 +4,13 @@
     <string name="hint_name">Name</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
+    <string name="hint_phone">Phone Number</string>
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="text_login">Login</string>
     <string name="text_register">Register</string>
     <string name="error_message_name">Enter Full Name</string>
     <string name="error_message_email">Enter Valid Email</string>
+    <string name="error_message_phno">Enter a Valid Phone Number</string>
     <string name="error_message_age">Enter Age</string>
     <string name="error_message_password">Enter Password</string>
     <string name="success_message">Registration Successful</string>
@@ -22,5 +24,7 @@
     <string name="text_title">YouthVine</string>
     <string name="facebook_app_id">173825099971516</string>
     <string name="fb_login_protocol_scheme">fb173825099971516</string>
+    <string name="sstext">Engineered Services at Bargained Price</string>
+    <string name="spheadhtext">Homie Proffesionals</string>
 
 </resources>

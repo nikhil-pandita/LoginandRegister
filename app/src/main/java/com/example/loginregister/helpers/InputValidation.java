@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 /**
  * Created by Nikhil on 9/13/2016.
@@ -45,6 +47,20 @@ public class InputValidation {
     }
 
 
+    public boolean isInputEditTextFilledok(EditText textInputEditText, String message) {
+        String value = textInputEditText.getText().toString().trim();
+        if (value.isEmpty()) {
+            textInputEditText.setError(message);
+            hideKeyboardFrom(textInputEditText);
+            return false;
+        } else {
+            textInputEditText.setError(null);
+        }
+
+        return true;
+    }
+
+
     /**
      * method to check InputEditText has valid email .
      *
@@ -61,6 +77,41 @@ public class InputValidation {
             return false;
         } else {
             textInputLayout.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    public boolean isInputEditTextEmaiok(EditText textInputEditText, String message) {
+        String value = textInputEditText.getText().toString().trim();
+        if (value.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(value).matches()) {
+            textInputEditText.setError(message);
+            hideKeyboardFrom(textInputEditText);
+            return false;
+        } else {
+            textInputEditText.setError(null);        }
+        return true;
+    }
+
+    public boolean isInputEditTextphno(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String message) {
+        String value = textInputEditText.getText().toString().trim();
+        if (value.isEmpty() || !Patterns.PHONE.matcher(value).matches()) {
+            textInputLayout.setError(message);
+            hideKeyboardFrom(textInputEditText);
+            return false;
+        } else {
+            textInputLayout.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    public boolean isInputEditTextphnook(EditText textInputEditText, String message) {
+        String value = textInputEditText.getText().toString().trim();
+        if (value.isEmpty() || !Patterns.PHONE.matcher(value).matches()) {
+            textInputEditText.setError(message);
+            hideKeyboardFrom(textInputEditText);
+            return false;
+        } else {
+            textInputEditText.setError(null);
         }
         return true;
     }
