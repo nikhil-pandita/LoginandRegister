@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -37,14 +40,41 @@ public class SP_Registration extends AppCompatActivity {
 
     Firebase firebase;
 
+    Spinner s;
+
     DatabaseReference databaseReference;
     public static final String Database_Path = "Service_Provider_Database";
+
+
+    String[] items = new String[] {"Select City!","Delhi"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sp__registration);
-        getSupportActionBar().hide();
+
+        s = (Spinner) findViewById(R.id.Spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.spinner_item, items);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        s.setAdapter(adapter);
+        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+//              if (position > 0){
+                items[0] = "Hydrebad";
+                s.setSelected(true);
+//                  lol = s.getItemAtPosition(position).toString();
+//                  s.setSelected(lol);
+//              }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+        });
 
         initViews();
         initObjects();

@@ -5,10 +5,7 @@
     android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="20dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
+
     tools:context=".activities.SP_Registration">
 
 
@@ -16,8 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="50dp" >
+        android:layout_marginTop="20dp" >
 
 
 
@@ -70,30 +71,45 @@
             />
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:gravity="bottom">
-
-            <Button
-                android:id="@+id/SPRegisterbtn"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@drawable/rounded_button"
-                android:text="@string/text_register"
+            <Spinner
+                android:id="@+id/Spinner"
+                style="@style/Spinner"
+                android:layout_width="250sp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
                 />
 
-        </RelativeLayout>
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/SPRegisterbtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/text_register"
+            />
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
+        android:layout_marginTop="40dp"
         android:text="@string/spheadhtext"
-        />
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:fontFamily="sans-serif" />
+
 </RelativeLayout>
+

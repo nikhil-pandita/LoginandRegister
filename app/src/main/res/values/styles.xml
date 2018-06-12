@@ -8,4 +8,16 @@
         <item name="colorControlNormal">@color/colorText</item>
         <item name="colorControlActivated">@color/colorText</item>
     </style>
+
+    <style name="newtheme" parent="Theme.AppCompat.NoActionBar" >
+        <item name="colorAccent">@color/accent_material_dark_1</item>
+        <item name="android:colorBackground">@color/background_material_dark</item>
+        <item name="android:windowBackground">@color/colorButtonNormal</item>
+    </style>
+
+
+    <style name="Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/bg_spinnerok</item>
+
+    </style>
 </resources>

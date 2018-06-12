@@ -44,7 +44,7 @@ public class SplashScreen extends AwesomeSplash {
     @Override
     public void animationsFinished() {
         Toast.makeText(SplashScreen.this, "Going to main activity!!", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, SP_Registration.class);
+        Intent intent = new Intent(this, Who_are_you.class);
         startActivity(intent);
     }
 }
