@@ -16,7 +16,6 @@
         android:paddingBottom="20dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="20dp"
         android:layout_below="@+id/textView2"
         android:layout_marginTop="20dp" >
 
@@ -64,7 +63,7 @@
             android:layout_height="50dp"
             android:hint="@string/hint_phone"
             android:textColorHint="#ff9a9a9a"
-            android:inputType="textPhonetic"
+            android:inputType="phone"
             android:maxLines="1"
             android:textColor="@android:color/black"
             android:drawableLeft="@drawable/ic_phone_android"
@@ -105,11 +104,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:text="@string/spheadhtext"
         android:textColor="@color/white"
         android:textSize="35dp"
-        app:fontFamily="sans-serif" />
+        app:fontFamily="@font/roboto_medium" />
 
 </RelativeLayout>
 

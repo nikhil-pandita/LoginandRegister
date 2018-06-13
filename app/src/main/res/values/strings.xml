@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login Register</string>
+    <string name="app_name">HomieProfessional_v1.1</string>
     <string name="text_accounts">All Accounts</string>
     <string name="hint_name">Name</string>
     <string name="hint_email">Email</string>
@@ -26,6 +26,6 @@
     <string name="facebook_app_id">173825099971516</string>
     <string name="fb_login_protocol_scheme">fb173825099971516</string>
     <string name="sstext">Engineered Services at Bargained Price</string>
-    <string name="spheadhtext">Homie Proffesionals</string>
+    <string name="spheadhtext">Homie Professionals</string>
 
 </resources>

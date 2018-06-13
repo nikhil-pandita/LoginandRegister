@@ -46,7 +46,7 @@ public class SP_Registration extends AppCompatActivity {
     public static final String Database_Path = "Service_Provider_Database";
 
 
-    String[] items = new String[] {"Select City!","Delhi"};
+    String[] items = new String[] {"Select City","Hydrebad","Delhi" };
 
 
     @Override
@@ -63,12 +63,13 @@ public class SP_Registration extends AppCompatActivity {
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-//              if (position > 0){
-                items[0] = "Hydrebad";
+               /* items[0] = "Hydrebad";
+            if (position > 0){*/
+
                 s.setSelected(true);
 //                  lol = s.getItemAtPosition(position).toString();
 //                  s.setSelected(lol);
-//              }
+            //}
             }
 
             @Override
