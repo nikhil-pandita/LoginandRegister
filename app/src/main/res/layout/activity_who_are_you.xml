@@ -1,141 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Who_are_you"
+    android:background="@drawable/bg1224"
     >
-
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:weightSum="10"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg1111">
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
+        >
 
-        <RelativeLayout
-            android:layout_weight="2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="40dp"
-            >
+        <TextView
+            android:id="@+id/textGrid"
+            android:text="I am a "
+            android:textSize="34sp"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/textGrid"
-                android:text="You are a "
-                android:textSize="34sp"
-                android:textColor="@android:color/white"
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+    </RelativeLayout>
 
-        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="50dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:id="@+id/servicecard"
+            card_view:cardElevation="10dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="25dp"
 
-        <GridLayout
-            android:id="@+id/mainGrid"
-            android:columnCount="2"
-            android:rowCount="1"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:layout_weight="3.5"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:padding="14dp"
-            >
+            card_view:cardCornerRadius="6dp">
 
-            <!-- Row 1 -->
-
-            <!-- Column 1 -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/usercard"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                app:cardElevation="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="8dp"
-                >
-
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:src="@drawable/ic_person1"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="User"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!-- Column 2 -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/servicecard"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="8dp"
-                >
-
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:src="@drawable/ic_build"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Service Professional"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
 
 
+                <ImageView
+                    android:id="@+id/card_view_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:padding="10dp"
+                    android:src="@drawable/service"
 
-        </GridLayout>
+                    />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/card_view_image_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fadingEdge="none"
+                    android:text="Service"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/card_view_image_title2"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:text="Professional"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20dp"/>
 
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            card_view:cardElevation="10dp"
+            android:layout_marginTop="210dp"
+
+            android:id="@+id/usercard"
+            android:layout_marginLeft="200dp"
+            card_view:cardCornerRadius="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:id="@+id/card_view_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:padding="10dp"
+                    android:src="@drawable/boy2"
+                    android:layout_marginBottom="13dp"
+                    />
+
+                <TextView
+                    android:id="@+id/card_view_image_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Customer"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
 </RelativeLayout>
